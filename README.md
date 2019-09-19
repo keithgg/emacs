@@ -29,7 +29,7 @@ Install dependencies
 Create .emacs file
 -----------------------
 
-Open up ~/.emacs
+Open, ~/.emacs otherwise ~/.config/emacs/init if you install the snapshot version above.
 
 Paste the following lines if you want to bring in the complete config:
     

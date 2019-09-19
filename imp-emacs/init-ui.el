@@ -42,5 +42,8 @@
   :config
   (editorconfig-mode 1))
 
+(setq mouse-yank-at-point t)
+(add-hook 'write-file-hooks 'delete-trailing-whitespace nil t)
+
 (provide 'init-ui)
 ;;; init-ui.el ends here

@@ -29,21 +29,4 @@
 (require 'init-winner)
 (require 'init-yaml)
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "unknown" :family "DejaVu Sans Mono"))))
- '(erb-face ((((class color) (min-colors 88) (background dark)) (:background "#121212"))))
- '(erb-out-delim-face ((((background dark)) (:background "#121212" :foreground "#aaffff"))))
- '(header-line ((default (:inherit mode-line)) (((class color grayscale) (background light)) (:background "grey90" :foreground "grey20" :box nil))))
- '(link ((((class color) (min-colors 88) (background light)) (:foreground "blue1" :underline t))))
- '(mmm-code-submode-face ((t (:background "LightGray"))))
- '(mmm-default-submode-face ((t (:background "#111111"))))
- '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background light)) (:background "black"))))
- '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background light)) (:background "#111111"))))
- '(mumamo-background-chunk-submode2 ((((class color) (min-colors 88) (background light)) (:background "dark violet"))))
- )
-
 (provide 'init-all)
