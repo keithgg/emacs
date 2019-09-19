@@ -44,15 +44,6 @@ Set up symlinks
     ln -s ~/id/emacs/pylintrc ~/.pylintrc
     ln -s ~/id/emacs/eslintrc ~/.eslintrc
     
-Start emacs for the first time
-------------------------------
-
-Start emacs with the command. It'll probably give you a pretty large error.
-
-    emacs ~/.emacs
-    
-Run the command `M-x eval-buffer`. All packages will install. Restart emacs.
-
 Python
 --------
 
