@@ -2,7 +2,7 @@ Clone this repo
 -------------------
 
     mkdir ~/emacs-config
-    git clone git@github.com:keithgg/emacs ~/emacs-conig
+    git clone git@github.com:keithgg/emacs ~/emacs-config
 
 Install dependencies
 -------------------------
@@ -33,7 +33,7 @@ Open, ~/.emacs otherwise ~/.config/emacs/init if you install the snapshot versio
 
 Paste the following lines if you want to bring in the complete config:
     
-    (add-to-list 'load-path "~/emacs-config/emacs/imp-emacs")
+    (add-to-list 'load-path "~/emacs-config/imp-emacs")
     (require 'init-all)
     
 Otherwise just look at `imp-emacs/init-all.el` to load only specfic modes. Only `init-imp` is required.
