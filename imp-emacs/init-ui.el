@@ -44,6 +44,7 @@
 
 (setq mouse-yank-at-point t)
 (add-hook 'write-file-hooks 'delete-trailing-whitespace nil t)
+(which-function-mode)
 
 (provide 'init-ui)
 ;;; init-ui.el ends here

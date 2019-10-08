@@ -16,4 +16,6 @@
   :init (global-git-gutter+-mode)
   :diminish (git-gutter+-mode . "gg"))
 
+(setq smerge-command-prefix "\C-cv")
+
 (provide 'init-git)

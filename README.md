@@ -1,8 +1,8 @@
 Clone this repo
 -------------------
 
-    mkdir ~/id/
-    git clone git@gitea.impd.co.za:keith/emacs.git ~/id/emacs
+    mkdir ~/emacs-config
+    git clone git@github.com:keithgg/emacs ~/emacs-conig
 
 Install dependencies
 -------------------------
@@ -33,7 +33,7 @@ Open, ~/.emacs otherwise ~/.config/emacs/init if you install the snapshot versio
 
 Paste the following lines if you want to bring in the complete config:
     
-    (add-to-list 'load-path "~/id/emacs/imp-emacs")
+    (add-to-list 'load-path "~/emacs-config/emacs/imp-emacs")
     (require 'init-all)
     
 Otherwise just look at `imp-emacs/init-all.el` to load only specfic modes. Only `init-imp` is required.
@@ -41,8 +41,8 @@ Otherwise just look at `imp-emacs/init-all.el` to load only specfic modes. Only 
 Set up symlinks
 -------------------
 
-    ln -s ~/id/emacs/pylintrc ~/.pylintrc
-    ln -s ~/id/emacs/eslintrc ~/.eslintrc
+    ln -s ~/emacs-config/pylintrc ~/.pylintrc
+    ln -s ~/emacs-config/eslintrc ~/.eslintrc
     
 Python
 --------
