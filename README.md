@@ -1,8 +1,10 @@
 Clone this repo
 -------------------
 
-    mkdir ~/emacs-config
-    git clone git@github.com:keithgg/emacs ~/emacs-config
+```bash
+mkdir ~/emacs-config
+git clone git@github.com:keithgg/emacs ~/emacs-config
+```
 
 Install dependencies
 -------------------------
@@ -19,7 +21,7 @@ sudo apt-get install emacs-snapshot
 
 # JS Syntax checking
 sudo apt-get install curl
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 sudo apt-get update
 sudo apt-get install -y nodejs
 
@@ -31,7 +33,7 @@ sudo npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-jsx es
 Create .emacs file
 -----------------------
 
-Open, ~/.emacs otherwise ~/.config/emacs/init if you install the snapshot version above.
+Open, `~/.emacs` otherwise `~/.config/emacs/init` if you install the snapshot version above.
 
 Paste the following lines if you want to bring in the complete config:
 
