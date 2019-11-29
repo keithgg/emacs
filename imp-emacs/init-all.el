@@ -23,6 +23,7 @@
 (require 'init-ruby)
 (require 'init-sudo)
 (require 'init-scss)
+(require 'init-sql)
 (require 'init-ui)
 (require 'init-web-mode)
 (require 'init-whitespace-helpers)
