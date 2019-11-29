@@ -4,6 +4,8 @@
   (global-flycheck-mode)
   )
 
+(setq warning-suppress-types '((flycheck)))
+
 (use-package flycheck-color-mode-line
   :ensure t
   :config

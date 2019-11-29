@@ -11,7 +11,7 @@ Install dependencies
 
 ```bash
 sudo apt-get update
-sudo apt-get install python python-dev build-essential curl virtualenv python-pip pylint ruby silversearcher-ag
+sudo apt-get install python python-dev build-essential curl virtualenv python-pip pylint ruby silversearcher-ag sqlformat
 
 # Install the latest emacs
 sudo add-apt-repository ppa:ubuntu-elisp/ppa
