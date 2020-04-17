@@ -1,44 +1,35 @@
 (use-package lsp-mode
   :ensure t
+  :config
+  (add-hook 'python-mode-hook #'lsp) ; or lsp-deferred
+  (setq gc-cons-threshold 100000000)
+  (setq read-process-output-max (* 1024 1024 10)) ;; 1mb
+  (setq lsp-prefer-capf t)
+  (setq lsp-idle-delay 0.500)
   )
 
 (use-package lsp-ui
   :ensure t
   :config
-  (add-hook 'lsp-mode-hook 'lsp-ui-mode)
-  (setq lsp-ui-doc-enable nil
-      lsp-ui-peek-enable nil
-      lsp-ui-sideline-enable nil
-      lsp-ui-imenu-enable nil
-      lsp-ui-flycheck-enable t)
-  )
-
-(use-package lsp-python
-  :ensure t
-  :config
-  (add-hook 'python-mode-hook #'lsp-python-enable)
+  (setq lsp-auto-configure nil)
   )
 
 (use-package company-lsp
   :ensure t
   :config
   (push 'company-lsp company-backends)
+  (setq company-minimum-prefix-length 1
+      company-idle-delay 0.0)
   )
 
-
-(use-package lsp-javascript-typescript
+(use-package lsp-python-ms
   :ensure t
-  :config
-  (add-hook 'js-mode-hook #'lsp-javascript-typescript-enable)
-  (defun my-company-transformer (candidates)
-    (let ((completion-ignore-case t))
-      (all-completions (company-grab-symbol) candidates)))
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-python-ms)
+                          (lsp))))  ; or lsp-deferred
 
-  (defun my-js-hook nil
-    (make-local-variable 'company-transformers)
-    (push 'my-company-transformer company-transformers))
+(use-package lsp-ivy :ensure t :commands lsp-ivy-workspace-symbol)
+(use-package lsp-treemacs :ensure t :commands lsp-treemacs-errors-list)
 
-  (add-hook 'js-mode-hook 'my-js-hook)
-  )
 
 (provide 'init-lsp)

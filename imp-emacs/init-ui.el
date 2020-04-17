@@ -25,7 +25,7 @@
 
 (setq-default show-trailing-whitespace nil)
 
-(make-directory "~/.emacs.d/auto-saves" t)
+(make-directory "~/.config/emacs/auto-saves" t)
 (setq backup-by-copying t)
 (setq backup-directory-alist `((".*" . "~/.emacs.d/auto-saves")))
 (setq auto-save-file-name-transforms `((".*" , "~/.emacs.d/auto-saves" t)))

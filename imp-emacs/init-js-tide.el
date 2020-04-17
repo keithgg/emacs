@@ -47,8 +47,12 @@
         (flycheck-mode 1)
         )
       )
-
+    (setq-default indent-tabs-mode nil)
+    (setq js-indent-level 2)
+    (setq web-mode-code-indent-offset 2)
     )
+  
+
   (setq web-mode-content-types-alist '(("jsx"  . "\\.js[x]?\\'")))
   (add-hook 'web-mode-hook 'my-web-mode-js-hook)
   (add-to-list 'auto-mode-alist '("\\.js?\\'" . web-mode))
