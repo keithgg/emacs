@@ -6,9 +6,12 @@
 (use-package company-jedi
   :ensure t
   :config
-  (defun my/jedi-python-mode-hook ()
-    (add-to-list 'company-backends 'company-jedi))
-  (add-hook 'python-mode-hook 'my/jedi-python-mode-hook)
+  (defun my/python-mode-hook ()
+    (add-to-list 'company-backends 'company-jedi)
+    (jedi-mode)
+    )
+
+  (add-hook 'python-mode-hook 'my/python-mode-hook)
   )
 
 (use-package python

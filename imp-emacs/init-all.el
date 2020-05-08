@@ -18,7 +18,6 @@
 (require 'init-projectile)
 (require 'init-python)
 (require 'init-python-jedi)
-;; (require 'init-python-eglot)
 (require 'init-rest)
 (require 'init-ruby)
 (require 'init-sudo)

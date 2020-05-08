@@ -6,12 +6,22 @@
   (setq read-process-output-max (* 1024 1024 10)) ;; 1mb
   (setq lsp-prefer-capf t)
   (setq lsp-idle-delay 0.500)
+  (add-to-list 'flycheck-checkers 'lsp)
+  (with-eval-after-load 'lsp-mode
+    (setq lsp-diagnostics-modeline-scope :project)
+    (add-hook 'lsp-managed-mode-hook 'lsp-diagnostics-modeline-mode))
+  (setq lsp-enable-indentation t)
+  (setq lsp-enable-on-type-formatting t)
+  (setq lsp-before-save-edits t)
+  (setq lsp-enable-file-watchers t)
+  (setq lsp-enable-text-document-color t)
+  (setq lsp-enable-completion-at-point t)
+  
   )
 
 (use-package lsp-ui
   :ensure t
   :config
-  (setq lsp-auto-configure nil)
   )
 
 (use-package company-lsp
@@ -22,14 +32,7 @@
       company-idle-delay 0.0)
   )
 
-(use-package lsp-python-ms
-  :ensure t
-  :hook (python-mode . (lambda ()
-                          (require 'lsp-python-ms)
-                          (lsp))))  ; or lsp-deferred
-
 (use-package lsp-ivy :ensure t :commands lsp-ivy-workspace-symbol)
 (use-package lsp-treemacs :ensure t :commands lsp-treemacs-errors-list)
-
 
 (provide 'init-lsp)
