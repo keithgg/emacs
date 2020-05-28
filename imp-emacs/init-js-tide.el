@@ -4,6 +4,7 @@
   :ensure t
   )
 
+
 (use-package prettier-js
   :ensure t
   )
@@ -62,8 +63,10 @@
   (setq-default flycheck-disabled-checkers
                 (append flycheck-disabled-checkers
                         '(javascript-jshint)))
+
+  (flycheck-add-mode 'javascript-eslint 'web-mode)
+
   )
 
 (provide 'init-js-tide)
 ;; init-js.el ends here
- 
