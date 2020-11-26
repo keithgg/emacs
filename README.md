@@ -26,7 +26,7 @@ sudo apt-get update
 sudo apt-get install -y nodejs
 
 sudo npm install -g npm 
-sudo npm install -g tern yarn tide typescript
+sudo npm install -g tide typescript prettier
 sudo npm install -g eslint babel-eslint eslint-plugin-react eslint-plugin-jsx eslint-plugin-flowtype eslint-plugin-react-app
 ```
     
