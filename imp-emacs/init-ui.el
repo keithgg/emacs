@@ -45,6 +45,12 @@
   :config
   (editorconfig-mode 1))
 
+(use-package smooth-scrolling
+  :ensure t
+  :config
+  (smooth-scrolling-mode 1)
+  )
+
 (setq mouse-yank-at-point t)
 (add-hook 'write-file-hooks 'delete-trailing-whitespace nil t)
 (which-function-mode)

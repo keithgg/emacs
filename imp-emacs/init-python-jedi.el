@@ -23,4 +23,8 @@
   
   )
 
+(use-package traad
+  :ensure t
+  )
+
 (provide 'init-python-jedi)
