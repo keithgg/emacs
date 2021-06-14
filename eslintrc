@@ -7,16 +7,14 @@
         },
         "sourceType": "module"
     },
-    "parser": "babel-eslint",
+    "parser": "@typescript-eslint/parser",
     "env": {
         "es6": true,
         "node": true,
         "browser": true
     },
 
-    "plugins": [
-        "react", "jsx", "react-app", "flowtype"
-    ],
+    "plugins": ["react", "jsx", "react-app", "flowtype", "@typescript-eslint"],
     "globals": {
         "document": false,
         "navigator": false,
@@ -25,9 +23,10 @@
 
     "rules": {
         "react/jsx-uses-react": 1,
-        "jsx/uses-factory": [1, {"pragma": "JSX"}],
-        "jsx/factory-in-scope": [0, {"pragma": "JSX"}],
+        "jsx/uses-factory": [1, { "pragma": "JSX" }],
+        "jsx/factory-in-scope": [0, { "pragma": "JSX" }],
         "jsx/mark-used-vars": 1,
+        "@typescript-eslint/no-use-before-define": ["error"],
         "jsx/no-undef": 1,
         "accessor-pairs": 2,
         "arrow-spacing": [2, { "before": true, "after": true }],
@@ -41,7 +40,7 @@
         "dot-location": [2, "property"],
         "eol-last": 2,
         "eqeqeq": [2, "allow-null"],
-        "handle-callback-err": [2, "^(err|error)$" ],
+        "handle-callback-err": [2, "^(err|error)$"],
         "key-spacing": [1, { "beforeColon": false, "afterColon": true }],
         "keyword-spacing": [2, { "before": true, "after": true }],
         "new-cap": [2, { "newIsCap": true, "capIsNew": false }],
@@ -128,11 +127,26 @@
         "no-with": 2,
         "object-property-newline": [2, { "allowMultiplePropertiesPerLine": true }],
         "one-var": [2, { "initialized": "never" }],
-        "operator-linebreak": [2, "after", { "overrides": { "?": "before", ":": "before" } }],
+        "operator-linebreak": [
+            2,
+            "after",
+            { "overrides": { "?": "before", ":": "before" } }
+        ],
         "rest-spread-spacing": [2, "never"],
         "space-in-parens": [1, "never"],
         "space-unary-ops": [1, { "words": true, "nonwords": false }],
-        "spaced-comment": [1, "always", { "line": { "markers": ["*package", "!", ","] }, "block": { "balanced": true, "markers": ["*package", "!", ","], "exceptions": ["*"] } }],
+        "spaced-comment": [
+            1,
+            "always",
+            {
+                "line": { "markers": ["*package", "!", ","] },
+                "block": {
+                    "balanced": true,
+                    "markers": ["*package", "!", ","],
+                    "exceptions": ["*"]
+                }
+            }
+        ],
         "template-curly-spacing": [2, "never"],
         "unicode-bom": [2, "never"],
         "use-isnan": 2,
