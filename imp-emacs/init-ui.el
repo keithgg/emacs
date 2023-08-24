@@ -51,6 +51,17 @@
   (smooth-scrolling-mode 1)
   )
 
+(use-package so-long
+  :ensure t
+  :config
+  (global-so-long-mode 1))
+
+(use-package ws-butler
+  :ensure t
+  :config
+  (ws-butler-global-mode 1)
+  )
+
 (setq mouse-yank-at-point t)
 (add-hook 'write-file-hooks 'delete-trailing-whitespace nil t)
 (which-function-mode)

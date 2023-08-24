@@ -15,7 +15,7 @@
             (visual-line-mode t)
             (writegood-mode t)
             (flyspell-mode t)))
-  (setq markdown-command "pandoc --smart -f markdown -t html")
+  (setq markdown-command "pandoc -f markdown -t html+smart")
   )
 
 (provide 'init-markdown)

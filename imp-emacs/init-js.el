@@ -22,5 +22,10 @@
   :ensure t
   )
 
+(use-package prettier-js
+  :ensure t
+  :hook (rjsx-mode . prettier-js-mode)
+  )
+
 (provide 'init-js)
 ;; init-js.el ends here

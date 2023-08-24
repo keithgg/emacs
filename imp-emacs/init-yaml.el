@@ -8,12 +8,6 @@
 
 (use-package ansible-vault
   :ensure t
-  :config
-  (defun ansible-vault-mode-maybe ()
-    (when (ansible-vault--is-vault-file)
-      (ansible-vault-mode 1))
-    )
-  (add-hook 'yaml-mode-hook 'ansible-vault-mode-maybe)
   )
 
 (provide 'init-yaml)
