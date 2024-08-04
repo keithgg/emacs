@@ -17,8 +17,4 @@
   :ensure t
   )
 
-(use-package pyenv-mode-auto
-  :ensure t
-  )
-
 (provide 'init-python)

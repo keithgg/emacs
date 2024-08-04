@@ -20,6 +20,11 @@
   (setq org-columns-default-format "%80ITEM(Task) %10Effort(Effort){:} %10CLOCKSUM")
   )
 
+(use-package org-roam
+  :ensure t
+  :config
+  (org-roam-db-autosync-mode)
+  )
 
 (require 'org-crypt)
 (org-crypt-use-before-save-magic)

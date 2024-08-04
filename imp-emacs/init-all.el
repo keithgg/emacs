@@ -1,7 +1,7 @@
 (require 'init-imp)
+(require 'init-treesitter)
 (require 'init-ag)
 (require 'init-android)
-(require 'init-autopair)
 (require 'init-company)
 (require 'init-dired)
 (require 'init-docker)
@@ -9,7 +9,7 @@
 (require 'init-git)
 (require 'init-ivy)
 (require 'init-js)
-(require 'init-js-tide)
+(require 'init-lsp)
 (require 'init-markdown)
 (require 'init-modeline)
 (require 'init-config-files)
@@ -28,5 +28,6 @@
 (require 'init-whitespace-helpers)
 (require 'init-winner)
 (require 'init-yaml)
+
 
 (provide 'init-all)

@@ -65,6 +65,7 @@
 (setq mouse-yank-at-point t)
 (add-hook 'write-file-hooks 'delete-trailing-whitespace nil t)
 (which-function-mode)
+(setq-default pgtk-wait-for-event-timeout 0)
 
 (provide 'init-ui)
 ;;; init-ui.el ends here
